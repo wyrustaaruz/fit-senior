@@ -35,7 +35,6 @@ function Carousel(props : any) {
                 autoPlayInterval={3500}
                 data={props.data}
                 renderItem={({ item, index, animationValue }) => {
-                    console.log("item",item)
                     return (
                     <Card
                         animationValue={animationValue}

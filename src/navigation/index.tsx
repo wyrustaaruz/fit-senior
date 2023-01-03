@@ -140,7 +140,6 @@ export default function Navigation({
 }: {
   colorScheme: ColorSchemeName;
 }) {
-  console.log("state.authReducers.authToken",useSelector((state: any) => state.authReducers))
   const token = useSelector((state: any) => state.authReducers.authToken);
   const [loading, setLoading] = React.useState(true);
 

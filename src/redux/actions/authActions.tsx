@@ -10,7 +10,6 @@ import {
 
 const Init = (): any => {
   return async (dispatch: any) => {
-    console.log(",m,t")
     let token = await AsyncStorage.getItem("token");
     if (token !== null) {
       dispatch({
