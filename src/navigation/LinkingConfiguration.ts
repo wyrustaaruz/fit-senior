@@ -9,7 +9,7 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          Robbery: {
+          Home: {
             screens: {
               TabOneScreen: 'one',
             },

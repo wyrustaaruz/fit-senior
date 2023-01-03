@@ -9,12 +9,7 @@ interface TextType extends DefaultTextType {
 
 export function Text(props: TextType) {
   const { style, type, ...otherProps } = props;
-  const color =
-    type === "danger"
-      ? Colors.Red
-      : type === "button"
-      ? Colors.Black
-      : Colors.Gold;
-  const fontWeight = type === "button" ? "600" : "300";
+  const color = Colors.Black
+  const fontWeight = type === 'button' || type === 'title' ? '600' : '300';
   return <DefaultText style={[{ color, fontWeight }, style]} {...otherProps} />;
 }

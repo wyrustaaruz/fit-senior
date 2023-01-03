@@ -9,10 +9,9 @@ export default function App() {
   const colorScheme = useColorScheme();
   return (
     <Provider store={store}>
-      <StatusBar />
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
-        <StatusBar style="light" />
+        <StatusBar style="dark" />
       </SafeAreaProvider>
     </Provider>
   );

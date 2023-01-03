@@ -12,7 +12,7 @@ import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/general/ModalScreen";
 import NotFoundScreen from "../screens/general/NotFoundScreen";
 import Splash from "../screens/general/Splash";
-import Robbery from "../screens/home/Robbery";
+import Home from "../screens/home/Home";
 import Login from "../screens/auth/Login";
 import { useDispatch, useSelector } from "react-redux";
 import { RootStackParamList, RootTabParamList } from "../../types";
@@ -45,8 +45,8 @@ function BottomTabNavigator() {
   const colorScheme = useColorScheme();
   return (
     <BottomTab.Navigator
-      sceneContainerStyle={{ backgroundColor: "464646" }}
-      initialRouteName="Robbery"
+      sceneContainerStyle={{ backgroundColor: Colors.PrimaryColor }}
+      initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
         tabBarIconStyle: {},
@@ -55,22 +55,22 @@ function BottomTabNavigator() {
       }}
     >
       <BottomTab.Screen
-        name="Robbery"
-        component={Robbery}
+        name="Home"
+        component={Home}
         options={{
-          title: "Soygun",
+          title: "Home",
           headerShown: false,
-          tabBarStyle: { backgroundColor: Colors.custom.background },
-          tabBarActiveBackgroundColor: Colors.custom.background,
+          tabBarStyle: { backgroundColor: Colors.PrimaryColor2 },
+          tabBarActiveBackgroundColor: 'rgba(0,0,0,0)',
           tabBarInactiveBackgroundColor: Colors.custom.background,
-          tabBarActiveTintColor: Colors.custom.tint,
+          tabBarActiveTintColor: Colors.PrimaryColor2Dark,
           tabBarIcon: (tabInfo) => {
             return (
               <Ionicons
                 name="walk-outline"
                 size={25}
                 color={
-                  tabInfo.focused ? Colors.custom.tint : Colors.custom.tabIconDefault
+                  tabInfo.focused ? Colors.PrimaryColor2Dark : Colors.custom.tabIconDefault
                 }
               />
             );
