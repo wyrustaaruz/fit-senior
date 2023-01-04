@@ -59,10 +59,61 @@ function BottomTabNavigator() {
         component={Home}
         options={{
           title: "Home",
+          tabBarShowLabel: false,
           headerShown: false,
           tabBarStyle: { backgroundColor: Colors.PrimaryColor2 },
           tabBarActiveBackgroundColor: 'rgba(0,0,0,0)',
-          tabBarInactiveBackgroundColor: Colors.custom.background,
+          tabBarInactiveBackgroundColor: 'rgba(0,0,0,0)',
+          tabBarActiveTintColor: Colors.PrimaryColor2Dark,
+          tabBarIcon: (tabInfo) => {
+            return (
+              <Ionicons
+                name="home-outline"
+                size={25}
+                color={
+                  tabInfo.focused ? Colors.PrimaryColor2Dark : Colors.custom.tabIconDefault
+                }
+              />
+            );
+          },
+        }}
+      />
+      <BottomTab.Screen
+        name="Activity"
+        component={Home}
+        options={{
+          title: "Activity",
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarStyle: { backgroundColor: Colors.PrimaryColor2 },
+          tabBarActiveBackgroundColor: 'rgba(0,0,0,0)',
+          tabBarInactiveBackgroundColor: 'rgba(0,0,0,0)',
+          tabBarActiveTintColor: Colors.PrimaryColor2Dark,
+          tabBarIcon: (tabInfo) => {
+            return (
+              <Ionicons
+                name="calendar-outline"
+                size={25}
+                color={
+                  tabInfo.focused
+                    ? Colors.PrimaryColor2Dark
+                    : Colors.custom.tabIconDefault
+                }
+              />
+            );
+          },
+        }}
+      />
+      <BottomTab.Screen
+        name="Sport"
+        component={Home}
+        options={{
+          title: "Sport",
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarStyle: { backgroundColor: Colors.PrimaryColor2 },
+          tabBarActiveBackgroundColor: 'rgba(0,0,0,0)',
+          tabBarInactiveBackgroundColor: 'rgba(0,0,0,0)',
           tabBarActiveTintColor: Colors.PrimaryColor2Dark,
           tabBarIcon: (tabInfo) => {
             return (
@@ -70,7 +121,35 @@ function BottomTabNavigator() {
                 name="walk-outline"
                 size={25}
                 color={
-                  tabInfo.focused ? Colors.PrimaryColor2Dark : Colors.custom.tabIconDefault
+                  tabInfo.focused
+                    ? Colors.PrimaryColor2Dark
+                    : Colors.custom.tabIconDefault
+                }
+              />
+            );
+          },
+        }}
+      />
+      <BottomTab.Screen
+        name="Profile"
+        component={Home}
+        options={{
+          title: "Profile",
+          tabBarShowLabel: false,
+          headerShown: false,
+          tabBarStyle: { backgroundColor: Colors.PrimaryColor2 },
+          tabBarActiveBackgroundColor: 'rgba(0,0,0,0)',
+          tabBarInactiveBackgroundColor: 'rgba(0,0,0,0)',
+          tabBarActiveTintColor: Colors.PrimaryColor2Dark,
+          tabBarIcon: (tabInfo) => {
+            return (
+              <Ionicons
+                name="person-outline"
+                size={25}
+                color={
+                  tabInfo.focused
+                    ? Colors.PrimaryColor2Dark
+                    : Colors.custom.tabIconDefault
                 }
               />
             );

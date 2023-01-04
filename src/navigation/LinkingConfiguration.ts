@@ -14,11 +14,6 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabOneScreen: 'one',
             },
           },
-          Club: {
-            screens: {
-              TabTwoScreen: 'two',
-            },
-          },
         },
       },
       Modal: 'modal',
